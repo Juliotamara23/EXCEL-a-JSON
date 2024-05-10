@@ -130,5 +130,5 @@ dist
 .pnp.*
 
 # Test
-Prueba.xlsx
-Prueba2.xlsx
+.Prueba.xlsx
+.Prueba2.xlsx
