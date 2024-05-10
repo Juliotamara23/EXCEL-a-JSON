@@ -129,6 +129,10 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-# Test
-Prueba.xlsx
-Prueba2.xlsx
+# Ignorar archivos de configuración de Node.js
+/node_modules/
+npm-debug.log
+
+# Ignorar archivos de prueba XLSX
+Prueba.XLSX
+Prueba2.XLSX
