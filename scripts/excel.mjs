@@ -2,7 +2,7 @@ let selectedFile;
 
 // Función para convertir Excel a JSON
 const excelToJson = (data) => {
-    let workbook = XLSX.read(data, { type: "binary" });
+    let workbook = XLSX.read(data, { type: "array" });
     let jsonData = [];
     workbook.SheetNames.forEach((sheet) => {
         let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet]);
@@ -75,7 +75,7 @@ document.getElementById('input').addEventListener("change", (event) => {
 document.getElementById('button').addEventListener("click", () => {
     if (selectedFile) {
         let fileReader = new FileReader();
-        fileReader.readAsBinaryString(selectedFile);
+        fileReader.readAsArrayBuffer(selectedFile);
         fileReader.onload = (event) => {
             let data = event.target.result;
             processExcel(data);
